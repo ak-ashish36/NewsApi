@@ -10,7 +10,7 @@ let category = ["general", "business", "entertainment", "health", "science", "sp
 news[7] = { "asss": "sasasa" };
 
 const fetchnews = async (category, id) => {
-    let data = await fetch(`https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=7467d5a072504d18b7a10c69ec6ef6bd&pageSize=100`)
+    let data = await fetch(`https://newsapi.org/v2/top-headlines?category=${category}&apiKey=7467d5a072504d18b7a10c69ec6ef6bd&pageSize=100`)
     let parsedData = await data.json();
     data = JSON.stringify(parsedData);
     news[id] = data;
